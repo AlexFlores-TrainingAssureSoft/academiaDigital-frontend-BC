@@ -63,7 +63,7 @@ stages:
             inputs:
               appName: 'academia-digital-web' 
               azureSubscription: 'Azure subscription 1 (95769b1d-2152-41ad-a8e7-0b5b80d2b9bb)'
-              appType: 'webAppLinux'
+              appType: 'webApp'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               runtimeStack: 'NODE|16-lts'
               startUpCommand: 'npm install -g serve && serve -n -l 8080'

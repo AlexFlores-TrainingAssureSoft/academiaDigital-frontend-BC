@@ -31,7 +31,7 @@ stages:
 
       - task: ArchiveFiles@2
         displayName: 'Zipping files'
-        #condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+        condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
         inputs:
           rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build'
           includeRootFolder: false
@@ -41,13 +41,13 @@ stages:
 
       - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         displayName: Publishing
-        #condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+        condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
         artifact: drop
 
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
-  #condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   jobs:
   - deployment: Deploy
     displayName: Deploying

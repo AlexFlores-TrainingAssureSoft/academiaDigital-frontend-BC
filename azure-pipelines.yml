@@ -11,6 +11,7 @@ pr:
 
 variables:
   vmImageName: 'ubuntu-latest'
+  System.Debug: true
 
 stages:
 - stage: Build

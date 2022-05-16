@@ -7,7 +7,7 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/v1/GetAll')
+    axios.get('https://academia-digital-api-ms.azurewebsites.net/api/v1/GetAll')
     .then( (response) => {
       setData(response.data);    
     })

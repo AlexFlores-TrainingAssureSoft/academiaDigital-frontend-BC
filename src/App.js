@@ -1,6 +1,11 @@
+import Layout from "./routes/Layout";
+import Container from '@mui/material/Container';
+
 function App() {
   return (
-    <h1>Academia digital</h1>
+    <Container>
+      <Layout />
+    </Container>
   );
 }
 

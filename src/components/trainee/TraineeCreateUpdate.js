@@ -10,7 +10,6 @@ const CreateUpdateTrainee = () => {
   .catch(error => console.log('error', error))
   }
   return (
-
     <TraineeForm saveTrainee={saveTrainee}/>
   )
 }

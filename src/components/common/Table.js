@@ -9,6 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ViewButton from './ViewButton';
 import DeleteButton from './DeleteButton';
+import Container from '@mui/material/Container';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -31,6 +32,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CustomizedTables({headers, data}) {
   return (
+    <Container>
     <TableContainer component={Paper} >
       <Table sx={{ minWidth: 400 }} aria-label="customized table" >
         <TableHead>
@@ -69,5 +71,6 @@ export default function CustomizedTables({headers, data}) {
         </TableBody>
       </Table>
     </TableContainer>
+    </Container>
   );
 }

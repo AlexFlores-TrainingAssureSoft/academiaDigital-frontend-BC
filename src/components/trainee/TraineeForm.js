@@ -1,16 +1,21 @@
 import { Formik } from 'formik';
 import {Input, Button} from '@mui/material'
-const TraineeForm = ({saveTrainee}) => {
+import {useNavigate} from 'react-router-dom';
+
+const TraineeForm = ({saveTrainee, trainee}) => {
+  const navigate = useNavigate();
+
+  const { firstName, lastName, email, address, mobile, headTrainer, group, feedback, guid } = trainee;
+
   return(
     <Formik
-    initialValues = {{firstName: '', lastName: '', email:'', address:'', mobile:'', headTrainer:'', group:''}} //aqui va los valores iniciales que llegarian por parametro
-    //validationSchema = {ProductSchema}
+    initialValues = {{ firstName, lastName, email, address, mobile, headTrainer, group, feedback, guid }} //aqui va los valores iniciales que llegarian por parametro
+    //validationSchema = {TraineeSchema}
     enableReinitialize= {true}
     onSubmit= {(values, actions) => {
-      //console.log('values ', values);
       actions.resetForm();
       saveTrainee(values);
-      //navigate('/');
+      navigate('/listTrainee');
     }}
     >
       {(props) => (
@@ -27,7 +32,6 @@ const TraineeForm = ({saveTrainee}) => {
             onBlur={props.handleBlur('firstName')}
           />
           <br></br>
-
           <label className="form-label">Apellido</label>
           <br></br>
           <Input
@@ -40,7 +44,6 @@ const TraineeForm = ({saveTrainee}) => {
             onBlur={props.handleBlur('lastName')}
           />
           <br></br>
-
           <label className="form-label">Email</label>
           <br></br>
           <Input
@@ -102,7 +105,6 @@ const TraineeForm = ({saveTrainee}) => {
           />
           <br></br>
           <br></br>
-          
           <Button type="submit" variant="contained" size="small" color="success" > Guardar </Button>
         </form>
       )}

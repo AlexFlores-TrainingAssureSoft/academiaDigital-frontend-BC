@@ -2,7 +2,7 @@ import Layout from "./routes/Layout";
 
 function App() {
   return (
-      <Layout />
+    <Layout />
   );
 }
 

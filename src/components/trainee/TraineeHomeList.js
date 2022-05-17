@@ -1,13 +1,16 @@
 import React, { useEffect, useState} from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import {api, type} from '../../constants/HttpRequest';
 import TraineeList from "./TraineeList";
 
 const TraineeHomeList = () => {
-
   const [data, setData] = useState([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    axios.get('https://academia-digital-api-ms.azurewebsites.net/api/v1/GetAll')
+    axios.get(`${api.academiaDigitalUrl}${type.getAllTrainees}`)
     .then( (response) => {
       setData(response.data);    
     })
@@ -20,8 +23,12 @@ const TraineeHomeList = () => {
     setData(data);
   }
 
+  const updateTrainee = (trainee) => {
+    navigate('/updateTrainee', {state: trainee});
+  }
+
   return(
-    <TraineeList trainees={data} updateList={updateList}/>
+    <TraineeList trainees={data} updateList={updateList} updateTrainee={updateTrainee}/>
   );
 }
 

@@ -1,4 +1,3 @@
-//import { MdPageview } from "react-icons/md";
 import {Button} from '@mui/material';
 
 const ViewButton = (props) => {

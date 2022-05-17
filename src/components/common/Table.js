@@ -15,6 +15,7 @@ import ViewButton from './ViewButton';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Container from '@mui/material/Container';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -124,6 +125,7 @@ export default function CustomizedTables({headers, data, updateList}) {
     <React.Fragment>
       {showModalDetails()}
       {showModalDelete()}
+      <Container>
       <TableContainer component={Paper} >
         <Table sx={{ minWidth: 400 }} aria-label="customized table" >
           <TableHead>
@@ -162,7 +164,8 @@ export default function CustomizedTables({headers, data, updateList}) {
           </TableBody>
         </Table>
       </TableContainer>    
-    </React.Fragment>  
+      </Container>  
+    </React.Fragment>
   );
 }
 

@@ -50,7 +50,7 @@ const NavBar = () => {
               style={{ color: "#ffffff", textDecoration: "none", margin:10, fontFamily:"Arial" }}
                 key={1}
                 sx={{ my: 4, color: 'white', display: 'block' ,width: 1/6 }}
-                to="/"
+                to="/traineeScreen"
             >
                 Show Trainees
           </NavLink>

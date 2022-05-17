@@ -11,8 +11,8 @@ const Layout = () => {
       <NavBar/>
       <div>
         <Routes>
-          {/* <Route exact path="/" element={ <TraineeScreen /> } /> */}
           <Route exact path="/" element={ <HomeIni /> } />
+          <Route exact path="/traineeScreen" element={ <TraineeScreen /> } />
           <Route exact path="/createTrainee" element={ <TraineeCreateScreen /> } />
           <Route exact path="/detailTrainee" element={ <TraineeDeatilScreen /> } />
         </Routes>

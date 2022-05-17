@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react";
 import axios from 'axios';
 import TraineeList from "./TraineeList";
 
-const Home = () => {
+const TraineeHomeList = () => {
 
   const [data, setData] = useState([]);
 
@@ -16,13 +16,13 @@ const Home = () => {
     })
   },[]);
 
-  const filter = (list) => {
-    setData(list)
+  const updateList = (data) => {
+    setData(data);
   }
 
   return(
-    <TraineeList trainees={data} filter={filter}/>
+    <TraineeList trainees={data} updateList={updateList}/>
   );
 }
 
-export default Home;
+export default TraineeHomeList;

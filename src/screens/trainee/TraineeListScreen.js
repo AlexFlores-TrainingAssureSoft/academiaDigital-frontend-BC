@@ -1,8 +1,8 @@
-import Home from "../../components/trainee/Home";
+import TraineeHomeList from "../../components/trainee/TraineeHomeList";
 
 function TraineeListScreen() {
   return (
-    <Home />
+    <TraineeHomeList />
   );
 }
   

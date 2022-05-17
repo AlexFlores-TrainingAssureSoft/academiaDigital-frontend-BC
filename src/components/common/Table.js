@@ -36,7 +36,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 
-export default function CustomizedTables({headers, data, filters}) {
+export default function CustomizedTables({headers, data, updateList}) {
   const [list, setList] = useState([]);
   const [currentTrainee, setCurrentTrainee] = useState(null);
   const [isVisibleDetails, setIsVisibleDetails] = useState(false);
@@ -100,8 +100,8 @@ export default function CustomizedTables({headers, data, filters}) {
                   axios.delete(`https://academia-digital-api-ms.azurewebsites.net/api/v1/DeleteById?uuid=${currentTrainee}`)
                   .then(() => {
                     console.log(`trainee with guid ${currentTrainee} was deleted`);
-                    const newList = data.filter((element) => element.guid !== currentTrainee )
-                    filters(newList);
+                    const filterList = data.filter((element) => element.guid !== currentTrainee )
+                    updateList(filterList);
                   })
                   .catch(error => console.log("ERROR: ", error)); 
                   setIsVisibleDelete(false)

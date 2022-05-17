@@ -1,9 +1,9 @@
 import Table from "../common/Table";
 
-const TraineeList = (data) => {
+const TraineeList = ({trainees, updateList}) => {
   const headers = ['Firstname', 'Lastname', 'Email', 'Address', 'Phone Number', 'Actions'];
   return (
-    <Table headers={headers} data={data.trainees} />
+    <Table headers={headers} data={trainees} updateList={updateList} />
   );
 }
 

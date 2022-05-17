@@ -1,21 +1,20 @@
-import { MdPageview } from "react-icons/md";
 import {Button} from '@mui/material';
 
-const ViewButton = () => {
+const ViewButton = (props) => {
   return (
     <Button 
+      onClick={props.onClick}
       sx={{ m: 1 }}
       variant="contained" 
       size="small" 
       style={{
-        backgroundColor: "#045bc3",
+        backgroundColor: props.color,
         color: "white"
       }} 
       startIcon={
-        <MdPageview color="white" 
-        />
+        <props.icon color="white"/>
       }>
-      View
+      {props.children}
     </Button>
   )
 }

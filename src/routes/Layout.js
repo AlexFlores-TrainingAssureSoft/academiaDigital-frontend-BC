@@ -12,7 +12,7 @@ const Layout = () => {
       <div>
         <Routes>
           {/* <Route exact path="/" element={ <TraineeScreen /> } /> */}
-          <Route exact path="/home" element={ <HomeIni /> } />
+          <Route exact path="/" element={ <HomeIni /> } />
           <Route exact path="/createTrainee" element={ <TraineeCreateScreen /> } />
           <Route exact path="/detailTrainee" element={ <TraineeDeatilScreen /> } />
         </Routes>

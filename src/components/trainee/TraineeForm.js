@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import {Input, Button} from '@mui/material'
 import {useNavigate} from 'react-router-dom';
+import ViewButton from '../common/ViewButton';
 
 const TraineeForm = ({saveTrainee, trainee}) => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const TraineeForm = ({saveTrainee, trainee}) => {
     }}
     >
       {(props) => (
-        <form className="m-3" onSubmit={props.handleSubmit} style={{ marginTop:"10%", marginLeft:"40%"}}>
+        <form className="m-3" onSubmit={props.handleSubmit} style={{ marginTop: "10%", marginLeft: "40%" }}>
           <label className="form-label">Nombre</label>
           <br></br>
           <Input
@@ -29,9 +30,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="firstName"
             onChange={props.handleChange}
             value={props.values.firstName}
-            onBlur={props.handleBlur('firstName')}
+            onBlur={props.handleBlur("firstName")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Apellido</label>
           <br></br>
           <Input
@@ -41,9 +44,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="lastName"
             onChange={props.handleChange}
             value={props.values.lastName}
-            onBlur={props.handleBlur('lastName')}
+            onBlur={props.handleBlur("lastName")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Email</label>
           <br></br>
           <Input
@@ -53,9 +58,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="email"
             onChange={props.handleChange}
             value={props.values.email}
-            onBlur={props.handleBlur('email')}
+            onBlur={props.handleBlur("email")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Direccion</label>
           <br></br>
           <Input
@@ -65,9 +72,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="address"
             onChange={props.handleChange}
             value={props.values.address}
-            onBlur={props.handleBlur('address')}
+            onBlur={props.handleBlur("address")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Celular</label>
           <br></br>
           <Input
@@ -77,9 +86,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="mobile"
             onChange={props.handleChange}
             value={props.values.mobile}
-            onBlur={props.handleBlur('mobile')}
+            onBlur={props.handleBlur("mobile")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Head trainer</label>
           <br></br>
           <Input
@@ -89,9 +100,11 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="headTrainer"
             onChange={props.handleChange}
             value={props.values.headTrainer}
-            onBlur={props.handleBlur('headTrainer')}
+            onBlur={props.handleBlur("headTrainer")}
           />
           <br></br>
+          <br></br>
+
           <label className="form-label">Grupo</label>
           <br></br>
           <Input
@@ -101,15 +114,16 @@ const TraineeForm = ({saveTrainee, trainee}) => {
             name="group"
             onChange={props.handleChange}
             value={props.values.group}
-            onBlur={props.handleBlur('group')}
+            onBlur={props.handleBlur("group")}
           />
           <br></br>
           <br></br>
+
           <Button type="submit" variant="contained" size="small" color="success" > Guardar </Button>
         </form>
       )}
     </Formik>
-  )
-}
+  );
+};
 
 export default TraineeForm;

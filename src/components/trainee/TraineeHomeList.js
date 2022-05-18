@@ -21,7 +21,7 @@ const TraineeHomeList = () => {
 
   const updateList = (data) => {
     setData(data);
-  }
+  };
 
   const updateTrainee = (trainee) => {
     navigate('/updateTrainee', {state: trainee});

@@ -27,10 +27,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
+  "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  '&:last-child td, &:last-child th': {
+  "&:last-child td, &:last-child th": {
     border: 0,
   },
 }));
@@ -45,11 +45,7 @@ const TraneesDataTable = ({headers, data, updateList, updateTrainee}) => {
     return(
       currentTrainee && (
         <React.Fragment>
-          <Modal
-            open={isVisibleDetails}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
+          <Modal open={isVisibleDetails} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
             <Box sx={style}>
               <Typography id="modal-modal-title" variant="h6" component="h2">
                 Personal Information
@@ -66,21 +62,18 @@ const TraneesDataTable = ({headers, data, updateList, updateTrainee}) => {
               <Typography id="modal-modal-description" sx={{ mt: 2, ml: 2 }}>
                 Mobile: {currentTrainee.mobile}
               </Typography>
-              <ViewButton 
-                color="#045bc3" 
-                icon={IoArrowBack} 
-                onClick={() => setIsVisibleDetails(false)}>
+              <ViewButton color="#045bc3" icon={IoArrowBack} onClick={() => setIsVisibleDetails(false)}>
                 Close
               </ViewButton>
             </Box>
           </Modal>
         </React.Fragment>
       )
-    )
-  }
+    );
+  };
 
   const showModalDelete = () => {
-    return(
+    return (
       <React.Fragment>
         <Modal
           open={isVisibleDelete}
@@ -168,13 +161,13 @@ const TraneesDataTable = ({headers, data, updateList, updateTrainee}) => {
 }
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };

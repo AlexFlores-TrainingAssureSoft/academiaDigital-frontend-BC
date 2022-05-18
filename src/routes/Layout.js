@@ -6,9 +6,9 @@ import NavBar from '../components/common/NavBar';
 import HomeIni from '../components/common/Home';
 
 const Layout = () => {
-  return(
+  return (
     <Router>
-      <NavBar/>
+      <NavBar />
       <div>
         <Routes>
           <Route exact path="/" element={ <HomeIni /> } />
@@ -20,6 +20,6 @@ const Layout = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default Layout;

@@ -1,19 +1,22 @@
-import { Formik } from "formik";
-import { Input, Button } from "@mui/material";
-import ViewButton from "../common/ViewButton";
+import { Formik } from 'formik';
+import {Input, Button} from '@mui/material'
+import {useNavigate} from 'react-router-dom';
 
-const TraineeForm = ({ saveTrainee }) => {
-  return (
+const TraineeForm = ({saveTrainee, trainee}) => {
+  const navigate = useNavigate();
+
+  const { firstName, lastName, email, address, mobile, headTrainer, group, feedback, guid } = trainee;
+
+  return(
     <Formik
-      initialValues={{ firstName: "", lastName: "", email: "", address: "", mobile: "", headTrainer: "", group: "" }} //aqui va los valores iniciales que llegarian por parametro
-      //validationSchema = {ProductSchema}
-      enableReinitialize={true}
-      onSubmit={(values, actions) => {
-        //console.log('values ', values);
-        actions.resetForm();
-        saveTrainee(values);
-        //navigate('/');
-      }}
+    initialValues = {{ firstName, lastName, email, address, mobile, headTrainer, group, feedback, guid }} //aqui va los valores iniciales que llegarian por parametro
+    //validationSchema = {TraineeSchema}
+    enableReinitialize= {true}
+    onSubmit= {(values, actions) => {
+      actions.resetForm();
+      saveTrainee(values);
+      navigate('/listTrainee');
+    }}
     >
       {(props) => (
         <form className="m-3" onSubmit={props.handleSubmit} style={{ marginTop: "10%", marginLeft: "40%" }}>

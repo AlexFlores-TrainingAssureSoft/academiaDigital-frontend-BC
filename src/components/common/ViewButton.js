@@ -4,9 +4,11 @@ const ViewButton = (props) => {
   return (
     <Button
       onClick={props.onClick}
+      type={props.type}
       sx={{ m: 1 }}
       variant="contained"
-      size="small"
+      size={props.size}
+      fullWidth={props.fullWidth && true}
       style={{
         backgroundColor: props.color,
         color: "white",

@@ -3,7 +3,7 @@ import TraineeScreen from '../screens/trainee/TraineeListScreen';
 import TraineeCreateScreen from '../screens/trainee/TraineeCreateScreen';
 import TraineeUpdateScreen from '../screens/trainee/TraineeUpdateScreen';
 import NavBar from '../components/common/NavBar';
-import HomeIni from '../components/common/Home';
+import Home from '../components/common/Home';
 
 const Layout = () => {
   return (
@@ -11,7 +11,7 @@ const Layout = () => {
       <NavBar />
       <div>
         <Routes>
-          <Route exact path="/" element={ <HomeIni /> } />
+          <Route exact path="/" element={ <Home /> } />
           <Route exact path="/listTrainee" element={ <TraineeScreen /> } />
           <Route exact path="/createTrainee" element={ <TraineeCreateScreen /> } />
           <Route exact path="/updateTrainee" element={ <TraineeUpdateScreen /> } />

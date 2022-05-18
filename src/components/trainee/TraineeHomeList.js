@@ -28,7 +28,7 @@ const TraineeHomeList = () => {
   }
 
   return(
-    <TraineeList trainees={data} updateList={updateList} updateTrainee={updateTrainee}/>
+    <TraineeList trainees={data} updateList={updateList} updateTrainee={updateTrainee} />
   );
 }
 

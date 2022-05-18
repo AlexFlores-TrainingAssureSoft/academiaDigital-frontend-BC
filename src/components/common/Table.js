@@ -121,7 +121,7 @@ const TraneesDataTable = ({headers, data, updateList, updateTrainee}) => {
       {showModalDetails()}
       {showModalDelete()}
       <Container>
-        <h2>Trainees List</h2>
+        <h2>TRAINEES LIST</h2>
         <TableContainer component={Paper} >
           <Table sx={{ minWidth: 400 }} aria-label="customized table" >
             <TableHead>

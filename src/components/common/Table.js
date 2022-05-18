@@ -62,6 +62,12 @@ const TraneesDataTable = ({headers, data, updateList, updateTrainee}) => {
               <Typography id="modal-modal-description" sx={{ mt: 2, ml: 2 }}>
                 Mobile: {currentTrainee.mobile}
               </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2, ml: 2 }}>
+                Head trainer: {currentTrainee.headTrainer}
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2, ml: 2 }}>
+                Group: {currentTrainee.group}
+              </Typography>
               <ViewButton color="#045bc3" icon={IoArrowBack} onClick={() => setIsVisibleDetails(false)}>
                 Close
               </ViewButton>

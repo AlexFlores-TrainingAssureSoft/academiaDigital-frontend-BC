@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import {Input, Button} from '@mui/material'
 import {useNavigate} from 'react-router-dom';
+import ViewButton from '../common/ViewButton';
 
 const TraineeForm = ({saveTrainee, trainee}) => {
   const navigate = useNavigate();
@@ -118,7 +119,7 @@ const TraineeForm = ({saveTrainee, trainee}) => {
           <br></br>
           <br></br>
 
-          <ViewButton color="#0c1c4c"> Guardar </ViewButton>
+          <Button type="submit" variant="contained" size="small" color="success" > Guardar </Button>
         </form>
       )}
     </Formik>

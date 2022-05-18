@@ -1,9 +1,7 @@
 import CreateUpdateTrainee from "../../components/trainee/TraineeCreateUpdate";
 
 const TraineeCreateScreen = () => {
-  return (
-    <CreateUpdateTrainee />
-  );
-}
-  
+  return <CreateUpdateTrainee />;
+};
+
 export default TraineeCreateScreen;

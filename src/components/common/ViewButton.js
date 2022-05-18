@@ -1,22 +1,21 @@
-import {Button} from '@mui/material';
+import { Button } from "@mui/material";
 
 const ViewButton = (props) => {
   return (
-    <Button 
+    <Button
       onClick={props.onClick}
       sx={{ m: 1 }}
-      variant="contained" 
-      size="small" 
+      variant="contained"
+      size="small"
       style={{
         backgroundColor: props.color,
-        color: "white"
-      }} 
-      startIcon={
-        <props.icon color="white"/>
-      }>
+        color: "white",
+      }}
+      startIcon={props.icon && <props.icon color="white" />}
+    >
       {props.children}
     </Button>
-  )
-}
+  );
+};
 
 export default ViewButton;
